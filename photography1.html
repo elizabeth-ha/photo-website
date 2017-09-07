@@ -1,0 +1,55 @@
+<html>
+  <head>
+     <meta name="viewport" content="width=device-width">
+    <!-- <link rel="icon" href="img/logo1.png"> -->
+    <link rel="stylesheet"
+    href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300|Roboto:100|Yrsa:300" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+    </script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js">
+    </script>
+    <script>
+    $(document).ready(function() {
+      $(function() {
+          $('body').removeClass('fade-out');
+      });
+      $(document).ready(function() {
+        $('.cover').fadeIn();
+      });
+      $(document).scroll(function(){
+        var vh = $('.cover').height() - $('.cover').height()/20;
+
+        if($(this).scrollTop() >= (vh*0.2))
+        {
+          $('.header').addClass('header-scroll');
+          $('.cover').addClass('cover-scroll');
+        } else {
+          $('.header').removeClass('header-scroll');
+          $('.cover').removeClass('cover-scroll');
+        }
+      });
+    });
+    </script>
+    <title>in the light</title>
+  </head>
+  <body class="fade-out">
+    <div class="header">
+      <h1>in the light</h1>
+      <div class="nav">
+        <h2 onclick='window.location.href="index.html"'>DARKNESS</h2>
+        <h2 onclick='window.location.href="photography1.html"'>::COLDNESS</h2>
+        <h2 onclick='window.location.href="photography2.html"'>SADNESS</h2>
+        <h2 onclick='window.location.href="photography3.html"'>BRIGHTNESS</h2>
+      </div>
+    </div>
+    <div class="cover" style="background-image: url('http://cdn.shopify.com/s/files/1/0094/2252/files/CNS_LOOKBOOK-13.png?7703791622769389686');"></div>
+    <div class="photo-cont">
+      <div id="photo1" class="photo" style="background-image: url('http://cdn.shopify.com/s/files/1/0094/2252/files/CNS_LOOKBOOK-01.png?17056128377095155527');"></div>
+      <div id="photo2" class="photo" style="background-image: url('http://cdn.shopify.com/s/files/1/0094/2252/files/CNS_LOOKBOOK-11.png?3240462217603587061');"></div>
+      <div id="photo3" class="photo" style="background-image: url('http://cdn.shopify.com/s/files/1/0094/2252/files/CNS_LOOKBOOK-04.png?10888985236824965346');"></div>
+    </div>
+  </body>
+</html>
